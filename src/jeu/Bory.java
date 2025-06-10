@@ -5,10 +5,9 @@ import java.awt.Point;
 public class Bory {
     Point position;
 
-    public Point getPosition() {
-        return position;
+    public Bory(Point position) {
+        this.position = new Point();
     }
-
     public double getX() {
         return this.position.x;
     }
@@ -17,4 +16,7 @@ public class Bory {
         return this.position.y;
     }
 
+    public Point getPosition() {
+        return position;
+    }
 }
