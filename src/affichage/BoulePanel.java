@@ -1,7 +1,7 @@
 package affichage;
 
 import jeu.*;
-
+import fonction.*;
 import javax.swing.*;
 import java.awt.*;
 

@@ -8,6 +8,7 @@ public class Bory {
     public Bory(Point position) {
         this.position = new Point();
     }
+
     public double getX() {
         return this.position.x;
     }

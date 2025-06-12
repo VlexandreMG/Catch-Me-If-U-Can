@@ -7,11 +7,13 @@ import jeu.*;
 public class DetectEdge {
     Point point;
     JFrame frame;
-    BorderCoordinates borderCoordinates = new BorderCoordinates(frame);
+    BorderCoordinates borderCoordinates;
+
 
     public DetectEdge(Point point,JFrame frame) {
         this.point = point;
         this.frame = frame;
+        this.borderCoordinates = new BorderCoordinates(frame);
     }
 
     public void MooveBory(Point point,BorderCoordinates borderCoordinates) {

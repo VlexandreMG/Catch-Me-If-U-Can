@@ -1,14 +1,17 @@
 package affichage;
 
-import jeu.Bory;
+import jeu.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
+import fonction.*;
 
 public class GameFrame extends JFrame {
     private Bory bory;
     private BoulePanel boulePanel;
+    private DetectEdge detectEdge;
+    private BorderCoordinates borderCoordinates;
 
     public GameFrame() {
         setTitle("Catch Me If You Can");
@@ -21,6 +24,10 @@ public class GameFrame extends JFrame {
         Point point = new Point(400,300);
         bory = new Bory(point);
         boulePanel = new BoulePanel(bory);
+        borderCoordinates = new BorderCoordinates(this);
+        detectEdge = new DetectEdge(point,this);
+
+        detectEdge.MooveBory(point,borderCoordinates);
 
         // Ajout du MouseMotionListener pour suivre en permanence la position
         boulePanel.addMouseMotionListener(new MouseMotionHandler());
